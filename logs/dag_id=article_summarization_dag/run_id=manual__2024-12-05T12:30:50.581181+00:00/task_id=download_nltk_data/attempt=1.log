@@ -1,0 +1,27 @@
+[2024-12-05T12:30:52.982+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-12-05T12:30:53.001+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: article_summarization_dag.download_nltk_data manual__2024-12-05T12:30:50.581181+00:00 [queued]>
+[2024-12-05T12:30:53.017+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: article_summarization_dag.download_nltk_data manual__2024-12-05T12:30:50.581181+00:00 [queued]>
+[2024-12-05T12:30:53.018+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2024-12-05T12:30:53.035+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): download_nltk_data> on 2024-12-05 12:30:50.581181+00:00
+[2024-12-05T12:30:53.054+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'article_summarization_dag', 'download_nltk_data', 'manual__2024-12-05T12:30:50.581181+00:00', '--job-id', '21', '--raw', '--subdir', 'DAGS_FOLDER/text_summarizatin.py', '--cfg-path', '/tmp/tmpaiaf4z5e']
+[2024-12-05T12:30:53.056+0000] {standard_task_runner.py:105} INFO - Job 21: Subtask download_nltk_data
+[2024-12-05T12:30:53.060+0000] {logging_mixin.py:190} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70 DeprecationWarning: This process (pid=6050) is multi-threaded, use of fork() may lead to deadlocks in the child.
+[2024-12-05T12:30:53.061+0000] {standard_task_runner.py:72} INFO - Started process 6069 to run task
+[2024-12-05T12:30:53.131+0000] {task_command.py:467} INFO - Running <TaskInstance: article_summarization_dag.download_nltk_data manual__2024-12-05T12:30:50.581181+00:00 [running]> on host 76b7591512d5
+[2024-12-05T12:30:53.229+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='article_summarization_dag' AIRFLOW_CTX_TASK_ID='download_nltk_data' AIRFLOW_CTX_EXECUTION_DATE='2024-12-05T12:30:50.581181+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-12-05T12:30:50.581181+00:00'
+[2024-12-05T12:30:53.231+0000] {logging_mixin.py:190} INFO - Task instance is in running state
+[2024-12-05T12:30:53.232+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: queued
+[2024-12-05T12:30:53.232+0000] {logging_mixin.py:190} INFO - Current task name:download_nltk_data state:running start_date:2024-12-05 12:30:53.002221+00:00
+[2024-12-05T12:30:53.232+0000] {logging_mixin.py:190} INFO - Dag name:article_summarization_dag and current dag run status:running
+[2024-12-05T12:30:53.232+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-12-05T12:30:57.391+0000] {logging_mixin.py:190} INFO - NLTK data downloaded successfully.
+[2024-12-05T12:30:57.396+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-12-05T12:31:00.787+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-12-05T12:31:00.788+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=article_summarization_dag, task_id=download_nltk_data, run_id=manual__2024-12-05T12:30:50.581181+00:00, execution_date=20241205T123050, start_date=20241205T123053, end_date=20241205T123100
+[2024-12-05T12:31:00.803+0000] {logging_mixin.py:190} INFO - Task instance in success state
+[2024-12-05T12:31:00.804+0000] {logging_mixin.py:190} INFO -  Previous state of the Task instance: running
+[2024-12-05T12:31:00.804+0000] {logging_mixin.py:190} INFO - Dag name:article_summarization_dag queued_at:2024-12-05 12:30:50.600157+00:00
+[2024-12-05T12:31:00.804+0000] {logging_mixin.py:190} INFO - Task hostname:76b7591512d5 operator:PythonOperator
+[2024-12-05T12:31:00.843+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-12-05T12:31:00.878+0000] {taskinstance.py:3900} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2024-12-05T12:31:00.880+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
